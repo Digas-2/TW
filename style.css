@@ -1,0 +1,251 @@
+/* geral */
+body{
+    font-family: sans-serif;
+    font-size:16px;
+    background-color: #E0E0E0;
+
+}
+
+h3{
+    font-family: sans-serif;
+    font-size: 20px;
+    color:  #1C1C1C;
+}
+
+/* botoes */
+button{
+    background-color:#555;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
+}
+
+button:hover{
+    background-color: #696969;
+    color: white;
+}
+
+
+/*botao desistir do jogo */
+#quit{
+    display: block;
+    margin-left: 35%;
+}
+
+#computerturn{
+    display: block;
+}
+
+/* header styles */
+.header{
+    display: block;
+    min-height: 100%;
+    position: relative;
+}
+
+.logotipo{
+    display: block;
+    float:inherit;
+    margin: 0 auto;
+    width: 100%;
+    height: 30%;
+    align-content: center;
+    text-align: center;
+    
+}
+
+.logotipo img{
+    max-width: 250px;
+    max-height: 200px;
+    width: auto;
+    height: auto;
+    align-content: center;
+}
+
+#menu{
+    display: none;
+    width: 100%;
+    align-content: center;
+    text-align: center;
+    padding-top: 0;
+}
+
+#menu ul{
+    padding: 0px;
+    margin; 0px;
+    list-style: none;
+}
+
+#menu ul, li{
+    display: inline;
+}
+
+#menu ul, li, a{
+    padding: 2px 10px;
+    display: inline-block;
+    text-decoration: none;
+    color: #1C1C1C;
+    font-family: sans-serif;
+}
+
+#menu ul, li, a:hover{
+    color: #696969;
+}
+
+
+/* body structure */
+.bodytabgame{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#rules{
+    display: inline-block;
+    text-align: justify;
+    width: 25%;
+    float: left;
+    margin-top: 3%;
+    margin-left: 5%;
+   
+}
+
+#rules h3{
+    text-align: center;
+}
+
+#rules p{
+    text-align: left;
+}
+
+#comand{
+    display: block;
+    text-align: center;
+    align-content: center;
+    margin-bottom: 5%;
+}
+
+#highs{
+    display: none;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    align-content: center;
+}
+
+#highs h3{
+    text-align: center;
+}
+
+#game{
+    display: none;   
+    width: 100%;
+     margin: 0 auto;
+    text-align: center;
+    align-content: center;
+}
+
+#mode{
+    display: none;
+    width: 100%;
+    align-content: center;
+    margin: 0 auto;
+    align-content: center;
+    text-align: center;
+}
+
+#modePlay{
+    display: none;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    align-content: center;
+}
+
+#tabuleiro{
+    display: inline-block;
+    width: 60%;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+#login{
+    display: block;
+    width: 100%;
+     margin: 0 auto;
+    text-align: center;
+    align-content: center;
+}
+
+#pcturn{
+    display:none;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 65%;
+}
+
+#startComputer, #startOpponent{
+   margin: 0;
+}
+
+#wait{
+    display: none; 
+}
+
+#giveup{
+    display: none;
+}
+
+/* tabuleiro do jogo */
+#lines{
+    display: block;
+}
+
+#img_parts{
+    width: 100%;
+}
+
+.parts{
+    width: 50px;
+    height:	50px;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+/* tabela classificativa */
+#highscore_table{
+    width: 55%;
+    text-align: center;
+    margin: 0 auto;   
+}
+
+#title{
+    display: block;  
+    border-radius: 4px;
+}
+
+#colunas{
+    display: inline-block;
+    background-color:#555;
+    color: white;
+    width: 20%;
+    padding: 0.99%;
+    border: 1px solid white;
+}
+
+#linhas{
+   display: block;  
+    border-radius: 4px; 
+}
+
+#col{
+    display: inline-block;
+    width: 20%;
+    padding: 0.99%;
+    border: 1px solid black;
+    border-top: none;
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Ana Germano 201105083 & Diogo Fernandes 201503723">
+        <meta name="description" content="Jogo do Nim">
+
+        <!-- imagem na pagina-->
+        <link href="UnityPlayer.png" rel="shortcut icon" type="image/png"/>
+        
+        <title>Nim Game</title>
+
+        <!-- CSS Style -->
+        <link rel="stylesheet" href="style.css" type="text/css">
+        
+        <!--JAVASCRIPT files -->
+        <script src="script.js" type="text/javascript"></script>
+        <script src="ScriptConnection.js" type="text/javascript"></script>
+        <script src="scriptGame.js" type="text/javascript"></script>
+        
+    </head>
+    <body onload="ranking()">
+        <!-- cabeçalho da pagina -->
+        <div class="header">
+            
+            <!-- logotipo -->
+            <div class="logotipo">
+                <img src="NimLogo.gif" alt="">
+            </div>
+            
+            <!-- menu -->
+            <div id="menu">
+                <ul>
+                    <li><a href="#" id="login_menu" onclick="">Login</a></li>
+                    <li><a href="#" onclick="newGame()">New Game</a></li>
+                    <li><a href="#" onclick="displayHighs()">Highscores</a></li>
+                    <li><a href="#" onclick="logout()">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- corpo do site -->
+        <div class="bodytabgame">
+           
+            <!-- login -->
+            <div id="login">
+                <p>Username: <input id="username" type="text"></p>
+                <p>Password: <input id="password" type="password"></p>
+                <button id="register" onclick="validate_register()">Register</button>
+                &nbsp; <!-- espaço -->
+                <button id="submit" onclick="validate_login()">Login</button>
+            </div>
+            
+            <!-- modo de contra computador ou multiplayer -->
+            <div id="modePlay">
+                <p></p>
+                <button id="singleplayer" onclick="singlePlayer()">Singleplayer</button>
+                <button id="multiplayer" onclick="multiPlayer()">Multiplayer</button>
+            </div>
+            
+            <!-- dificuldade -->
+             <div id="mode">
+                 <form>
+                     <p>Difficulty mode:</p>
+                     <p><input type="radio" name="difficulty" id="beginner">Beginner<br>
+                     <input type="radio" name="difficulty" id="intermediate">Intermediate<br>
+                     <input type="radio" name="difficulty" id="expert">Expert</p>
+                     <p>Board size: <input type="number" id="numLinhas" min="3" max="8"></p>
+                    <p>Who starts the game?</p>
+                     <input type="radio" name="player" id="human">Human<br>
+                     <p id="startComputer"> <input type="radio" name="player" id="computer">Computer</p>
+                     <p id="startOpponent"><input type="radio" name="player" id="opponent">Opponent</p>
+                     <p></p>
+                     <button type="button" value="Play Offline" onclick="buttonPlayGame()">Play Game</button>
+                </form>
+            </div>
+            
+            <!-- base do jogo e as regras -->
+            <div id="game">
+                <div id="rules">
+                    <h3>Game Rules</h3>
+                    <p>Nim is a Mathematical Strategy Games where two player remove objects from different stacks one at a time. Each Player at each move, has to remove one or more objects from the same stack. <br> After the player finishes his/her play it must press the button "Computer Turn" to complete turn. The player that removes the last object wins! </p>  
+                                 
+                    <!-- comandos do jogo -->   
+                    <div id="comand">
+                        <button type="button" value="Quit Game" onclick="quitGame()" id="quit">Quit Game</button> 
+                        <p></p>
+                    </div>   
+                </div>
+                
+                <!-- tabuleiro do jogo -->
+                <div id="tabuleiro"></div>
+                <div id="pcturn">
+                      <button type="button" value="0" onclick="aiTurn()" id="computerturn">Computer Turn</button> 
+                     <button type="button"  onclick="wait_for_next_player()" id="OpponentTurn">Opponent Turn</button> 
+                </div>
+                <div id="wait">
+                    <p>Waiting for another player.<br>
+                    Please wait...</p>
+                </div>
+                <div id="desiste">
+                    <button type="button" onclick="quitOPP()" id="giveup">To give up</button> 
+                </div>
+            </div>
+            <div id="highs">
+                <h3>Highscores</h3>
+            </div>
+        </div>   
+    </body>
+</html>
